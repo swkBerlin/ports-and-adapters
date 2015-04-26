@@ -1,12 +1,12 @@
 # Hexagonal Architecture / Ports and Adapter Kata
 
-This is a kata on ports and adapters architecture. The task is to retrieve a list of ... from the following API:
+This is a kata on ports and adapters architecture. The task is to retrieve a list of weather observations on Iceland from the following API:
 
 http://apis.is/weather/observations/en?stations=
 
 and output the result into a CSV file of the following format:
 
-name,date,time,wind_direction (optional)
+id,name,date,time,temperature,pressure,wind_direction (optional)
 
 The API documentation can be found here: http://docs.apis.is/#endpoint-weather
 
