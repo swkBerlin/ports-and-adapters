@@ -1,7 +1,7 @@
 require_relative "application"
 
-weather_provider = WeatherAPIAdapter.new
-output_provider = CSVFileProvider.new
+weather_provider = WeatherAPIAdapter.new "http://apis.is/weather/observations/en?stations=1,36049"
+output_provider = CSVFileProvider.new "output.csv"
 
 puts "Starting application"
 

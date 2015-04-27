@@ -40,6 +40,8 @@ end
 
 describe WeatherAPIAdapter do
 
+  subject { described_class.new "http://apis.is/weather/observations/en?stations=1" }
+
   describe ".information" do
 
     it "calls the API and returns its json data" do

@@ -22,14 +22,17 @@ require "json"
 
 class WeatherAPIAdapter # implements WeatherProvider
 
+  attr_reader :url
+
+  def initialize(url)
+    @url = url
+  end
+
   #
   # @return [Application::WeatherInformation]
   #
   def information
-    # uri could be configured in constructor
-    uri = URI.parse "http://apis.is/weather/observations/en?stations=1"
-
-    content = uri.read
+    content = open(url).read
 
     json = JSON.parse content
 
@@ -57,11 +60,14 @@ require "csv"
 
 class CSVFileProvider
 
-  def write(information)
-    # target file could be configured in constructor
-    target = "./output.csv"
+  attr_reader :target_file
 
-    CSV.open(target, "w") { |csv|
+  def initialize(target_file)
+    @target_file = target_file
+  end
+
+  def write(information)
+    CSV.open(target_file, "w") { |csv|
 
       header_created = false
 
