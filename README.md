@@ -11,7 +11,7 @@ id,name,date,time,temperature,pressure,wind_direction (optional)
 The API documentation can be found here: http://docs.apis.is/#endpoint-weather
 
 The goal is not to get this done as quickly as possible, but to follow the rules of
-(http://alistair.cockburn.us/Hexagonal+architecture)[ports and adapters architecture]:
+[ports and adapters architecture](http://alistair.cockburn.us/Hexagonal+architecture):
   * The application itself does not depend directly on any external systems, but only on ports
   * The protocol for a port is given by the purpose of the conversation it describes
   * For each external system there is an ‘’adapter’’ that converts the API definition to the format needed by that system and vice versa
