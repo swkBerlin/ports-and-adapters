@@ -6,7 +6,6 @@
 
     <groupId>com.schmeisky</groupId>
     <artifactId>apikata-java-scaffolding</artifactId>
-    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
