@@ -18,7 +18,7 @@ public class APIAccess {
 
     public static void main(final String[] args) {
         try {
-            final URL url = new URL("http://apis.is/weather/observations/en?stations=1");
+            final URL url = new URL("https://apis.is/weather/observations/en?stations=1");
             try(InputStream inputStream = url.openStream();
                     InputStreamReader inputStreamReader = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
             ) {
